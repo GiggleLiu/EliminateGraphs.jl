@@ -1,0 +1,13 @@
+name = "EliminateGraphs"
+uuid = "b3ff564c-d3b6-11e9-0ef2-9b4ae9f9cbe1"
+authors = ["JinGuo Liu", "WenJie Peng"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
