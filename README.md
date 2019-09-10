@@ -1,19 +1,19 @@
-# MISAlgorithms
+# EliminateGraphs
 
-[![Build Status](https://travis-ci.com/GiggleLiu/MISAlgorithms.jl.svg?branch=master)](https://travis-ci.com/GiggleLiu/MISAlgorithms.jl)
-[![Codecov](https://codecov.io/gh/GiggleLiu/MISAlgorithms.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/GiggleLiu/MISAlgorithms.jl)
+[![Build Status](https://travis-ci.com/GiggleLiu/EliminateGraphs.jl.svg?branch=master)](https://travis-ci.com/GiggleLiu/EliminateGraphs.jl)
+[![Codecov](https://codecov.io/gh/GiggleLiu/EliminateGraphs.jl/branch/master/graph/badge.svg)](https://codecov.io/gh/GiggleLiu/EliminateGraphs.jl)
 
 Maximum independent set algorithms, e.g. branching, measure and conquer.
 
 ## To develop
 Type `]` in a Julia REPL, then input
 ```julia
-pkg> dev git@github.com:GiggleLiu/MISAlgorithms.jl.git
+pkg> dev git@github.com:GiggleLiu/EliminateGraphs.jl.git
 ```
 
 ## To run an example
 ```julia
-julia> using MISAlgorithms
+julia> using EliminateGraphs
 
 julia> eg = rand_eg(60, 0.05);
 
