@@ -12,3 +12,11 @@ function mis1(eg::EliminateGraph)
         return 1 + neighborcover_mapreduce(y->eliminate(mis1, eg, NeighborCover(y)), max, eg, vmin)
     end
 end
+
+function mis1(eg::EliminateGraph, visulization::Bool)
+    N = mis1(eg)
+    if visulization == true
+        g = SimpleGraph(N)
+        gplot(g)
+    end
+end
