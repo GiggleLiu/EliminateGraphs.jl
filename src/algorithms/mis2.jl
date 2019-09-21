@@ -119,3 +119,12 @@ function adjacent45(eg::EliminateGraph)
         end
     end
 end
+
+
+function mis2(eg::EliminateGraph, visulization::Bool)
+    N = mis2(eg)
+    if visulization == true
+        g = SimpleGraph(N)
+        gplot(g)
+    end
+end

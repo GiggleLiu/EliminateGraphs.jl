@@ -1,5 +1,8 @@
 module EliminateGraphs
 import LightGraphs
+import GraphPlot
+using LightGraphs
+using GraphPlot
 include("utils.jl")
 include("Core.jl")
 include("Graph.jl")
