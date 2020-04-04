@@ -47,15 +47,6 @@ struct UnionOf{TA, TB}<:AbstractVertexSet
 end
 Base.:∪(A::AbstractVertexSet, B::AbstractVertexSet) = UnionOf(A, B)
 
-function vertices end
-
-"""
-    neighbors(eg::EliminateGraph, i::Int)
-
-Get neighbors of vertex `i`.
-"""
-function neighbors end
-
 """
     neighborcover(eg::EliminateGraph, i::Int)
 

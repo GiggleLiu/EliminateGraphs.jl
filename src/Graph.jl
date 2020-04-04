@@ -3,16 +3,16 @@ export nv0, nv, ne0, ne
 export isconnected, unsafe_connect!, unsafe_disconnect!, find_cluster
 
 """
-    EliminateGraph
+    EliminateGraph <: AbstractGraph
     EliminateGraph(tbl::AbstractMatrix) -> EliminateGraph
 
 A graph type for algorithms that involve node elimination.
 With this type, vertex elimination and recover do not allocate.
 `tbl` in the constructor is a boolean table for connection.
 """
-mutable struct EliminateGraph
+mutable struct EliminateGraph{T} <: LightGraphs.AbstractGraph{T}
     tbl::Matrix{Bool}
-    vertices::Vector{Int}
+    vertices::Vector{T}
     ptr::Vector{Int}
     level::Int
     nv::Int
