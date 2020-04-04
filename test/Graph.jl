@@ -1,5 +1,6 @@
 using Test
 using EliminateGraphs
+using LightGraphs
 
 @testset "constructors and properties" begin
     tbl = Bool[false true false false; true false true true; false true false true; false true true false]
@@ -119,4 +120,11 @@ end
     @test g == K_eg(3,3)
 
     @test generate_set(g, Mirrors{OPEN}(1) ∪ Vertex(1)) == generate_set(g, MirrorCover(1))
+end
+
+@testset "convert" begin
+    g = K_eg(3,3)
+    sg = SimpleGraph(g)
+    g2 = sg |> EliminateGraph
+    @test g == g2
 end

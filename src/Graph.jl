@@ -151,3 +151,16 @@ function Base.show(io::IO, eg::EliminateGraph)
         println(io)
     end
 end
+
+# convert to light graphs
+LightGraphs.SimpleGraph(eg::EliminateGraph) = SimpleGraph(ne(eg), [[neighbors(eg, iv)...] for iv=1:nv(eg)])
+function EliminateGraph(sg::SimpleGraph)
+    N = nv(sg)
+    tbl = zeros(Bool, N, N)
+    for iv = 1:N
+        @inbounds for jv in sg.fadjlist[iv]
+            tbl[iv, jv] = true
+        end
+    end
+    EliminateGraph(tbl)
+end
