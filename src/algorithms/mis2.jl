@@ -1,7 +1,7 @@
 export mis2
 
 """
-Solving MIS problem with sofisticated branching algorithm.
+Solving MIS problem with sophisticated branching algorithm.
 """
 function mis2(eg::EliminateGraph)
     if nv(eg) == 0
