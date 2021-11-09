@@ -1,6 +1,6 @@
 using Test
 using EliminateGraphs
-using Graphs
+using LightGraphs
 
 @testset "constructors and properties" begin
     tbl = Bool[false true false false; true false true true; false true false true; false true true false]

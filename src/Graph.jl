@@ -10,7 +10,7 @@ A graph type for algorithms that involve node elimination.
 With this type, vertex elimination and recover do not allocate.
 `tbl` in the constructor is a boolean table for connection.
 """
-mutable struct EliminateGraph{T} <: Graphs.AbstractGraph{T}
+mutable struct EliminateGraph{T} <: LightGraphs.AbstractGraph{T}
     tbl::Matrix{Bool}
     vertices::Vector{T}
     ptr::Vector{Int}
@@ -153,7 +153,7 @@ function Base.show(io::IO, eg::EliminateGraph)
 end
 
 # convert to light graphs
-Graphs.SimpleGraph(eg::EliminateGraph) = SimpleGraph(ne(eg), [[neighbors(eg, iv)...] for iv=1:nv(eg)])
+LightGraphs.SimpleGraph(eg::EliminateGraph) = SimpleGraph(ne(eg), [[neighbors(eg, iv)...] for iv=1:nv(eg)])
 function EliminateGraph(sg::SimpleGraph)
     N = nv(sg)
     tbl = zeros(Bool, N, N)

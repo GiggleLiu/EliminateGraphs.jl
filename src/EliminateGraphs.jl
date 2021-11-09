@@ -1,7 +1,7 @@
 module EliminateGraphs
 
-using Graphs
-import Graphs: vertices, edges, neighbors, ne, nv, degree
+using LightGraphs
+import LightGraphs: vertices, edges, neighbors, ne, nv, degree
 
 include("utils.jl")
 include("Core.jl")
